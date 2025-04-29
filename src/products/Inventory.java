@@ -16,22 +16,21 @@ public class Inventory <T extends Product>{
         items.add(item);
     }
 
-    public void removeItemsById(int id){
-        for(T item : items){
-            if (Integer.parseInt(item.getId()) == id){
-                items.remove(item);
-                return;
+    public void removeItemsById(int id) {
+        items.removeIf(p -> {
+            try {
+                return Integer.parseInt(p.getId()) == id;
+            } catch (NumberFormatException e) {
+                return false;
             }
-            System.out.println("Item not found");
-            return;
-        }
+        });
     }
 
-    public void applyDiscount (String productName, int discount){
-        for(T item : items){
-            if (item.getTitle().equals(productName)){
-                double discountPrice = item.getPrice() - (item.getPrice() * (discount / 100));
-                item.setPrice(discountPrice);
+    public void applyDiscount(String productName, int discount) {
+        for (T p : items) {
+            if (p.getTitle().equals(productName)) {
+                double discountedPrice = p.getPrice() * (1 - discount / 100.0);
+                p.setPrice(discountedPrice);
             }
         }
     }
