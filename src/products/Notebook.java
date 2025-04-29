@@ -3,6 +3,7 @@ package products;
 public class Notebook extends Product {
     private int pageCount;
     private boolean isHardCover;
+    private static int UUID = 0;
 
     public Notebook(String title, double price, int pageCount, boolean isHardCover) {
         super(title, price);
@@ -25,7 +26,8 @@ public class Notebook extends Product {
 
     @Override
     protected String generateId() {
-        return "2" + (int)(Math.random() * 1000);
+        UUID++;
+        return "2" + UUID;
     }
 
     @Override

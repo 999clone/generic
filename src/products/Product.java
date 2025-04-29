@@ -8,6 +8,7 @@ public abstract class Product {
     public Product(String title, double price) {
         this.title = title;
         this.price = price;
+        this.id = generateId();
     }
 
     public void setTitle(String title) {
