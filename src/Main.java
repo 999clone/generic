@@ -60,8 +60,8 @@ public class Main {
         Product notFound = accessoryInventory.findItemsById(99999);
 
 
-        bookInventory.applyDiscount("bp", 20); // 20٪ تخفیف
-        accessoryInventory.applyDiscount("khodkar", 50);   // 50٪ تخفیف
+        bookInventory.applyDiscount("bp", 20);
+        accessoryInventory.applyDiscount("khodkar", 50);
 
 
         System.out.println("\nFinal Book Inventory:");
