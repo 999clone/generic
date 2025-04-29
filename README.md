@@ -11,4 +11,3 @@ A simple Java project for managing different types of products (Book, Notebook, 
 ## Features
 - Clean OOP design
 - Generic inventory
-- Simple and testable logic
