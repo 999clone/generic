@@ -2,10 +2,12 @@ package products;
 
 public class Accessory extends Product{
     private String color;
+    private static int UUID = 0;
 
     public Accessory(String title, double price, String color) {
         super(title, price);
         this.color = color;
+
     }
 
     public String getColor() {
@@ -17,7 +19,8 @@ public class Accessory extends Product{
 
     @Override
     protected String generateId() {
-        return "3" + (int)(Math.random() * 1000);
+        UUID++;
+        return "3" + UUID;
     }
 
     @Override
