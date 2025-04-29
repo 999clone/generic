@@ -5,10 +5,9 @@ public abstract class Product {
     private double price;
     private String id;
 
-    public Product(String title, double price, String id) {
+    public Product(String title, double price) {
         this.title = title;
         this.price = price;
-        this.id = id;
     }
 
     public void setTitle(String title) {
@@ -36,6 +35,5 @@ public abstract class Product {
     }
 
     protected abstract String generateId();
-
 
 }
