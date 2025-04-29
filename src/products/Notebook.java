@@ -4,7 +4,7 @@ public class Notebook extends Product {
     private int pageCount;
     private boolean isHardCover;
 
-    public Notebook(String title, int price, int pageCount, boolean isHardCover) {
+    public Notebook(String title, double price, int pageCount, boolean isHardCover) {
         super(title, price);
         this.pageCount = pageCount;
         this.isHardCover = isHardCover;
