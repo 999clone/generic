@@ -4,7 +4,7 @@ public class Book extends Product {
     private String author;
     private String publication;
     private String genre;
-    public static int UUID = 0;
+    public static int UUID = 1000;
 
     public Book(String title, double price,  String author, String publication, String genre) {
         super(title, price);
@@ -34,7 +34,7 @@ public class Book extends Product {
     @Override
     protected String generateId() {
         UUID++;
-        return "1" + UUID;
+        return String.valueOf(UUID);
     }
     @Override
     public String toString() {

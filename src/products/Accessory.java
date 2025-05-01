@@ -2,7 +2,7 @@ package products;
 
 public class Accessory extends Product{
     private String color;
-    private static int UUID = 0;
+    private static int UUID = 3000;
 
     public Accessory(String title, double price, String color) {
         super(title, price);
@@ -20,7 +20,7 @@ public class Accessory extends Product{
     @Override
     protected String generateId() {
         UUID++;
-        return "3" + UUID;
+        return String.valueOf(UUID);
     }
 
     @Override
